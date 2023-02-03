@@ -344,47 +344,36 @@
 //     color: #b79d82;
 //}
 //
-//// sidebar start
-//.offcanvas {
-//    position: fixed;
-//    bottom: 0;
-//    z-index: 1045;
-//    z-index: 99999999;
-//    display: flex;
-//    flex-direction: column;
-//    max-width: 100%;
-//    visibility: hidden;
-//    background-color: #fff;
-//    background-clip: padding-box;
-//    outline: 0;
-//    transition: transform 0.3s ease-in-out;
-//}
+// sidebar start
 //.side__bar a{
 //    color: white;
 //}
-//.offcanvas-end {
-//    width: 300px ;
-//}
-//.offcanvas {
-//    background: #152136 ;
-//}
-//.offcanvas-header {
-//    margin-bottom: 15px;
-//}
-//.btn-close:focus {
-//    outline: 0;
-//    box-shadow: none ;
-//}
-//.offcanvas-body {
-//    padding: 30px ;
-//}
-//.btn-close {
-//    //background: transparent url(../img/icon/close-icon.svg) center/1em auto no-repeat ;
-//    opacity: 1 ;
-//    position: absolute;
-//    top: 30px;
-//    font-size: 25px;
-//}
+.offcanvas-end {
+  width: 300px;
+}
+.offcanvas-header {
+  border-bottom: 1px solid #eaeaea;
+  height: 64px;
+  padding-left: 30px;
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: none ;
+}
+
+.offcanvas-body {
+  padding: 20px 30px 30px 30px;
+  font-size: 16px;
+}
+
+.btn-close {
+  opacity: 1;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 20px;
+}
 //.side-info {
 //    width: auto;
 //    height: 100%;
@@ -396,28 +385,23 @@
 //    transition: .6s;
 //    overflow-y:inherit;
 //}
-//
-//.sidebar_sub_menu{
-//    list-style: none;
-//}
-//.sidebar_sub_menu li{
-//    margin-bottom: 10px;
-//    border-bottom: 1px solid #2a3a57;
-//    padding-bottom: 5px;
-//}
-//.sidebar_sub_menu li a{
-//    opacity: 0.75;
-//    padding-left: 25px;
-//}
-//
-//
-//.iconAdd{
-//    position: relative;
-//    color: white;
-//    border-top: 1px solid #2a3a57;
-//    border-bottom: 1px solid #2a3a57;
-//    padding: 6px 0;
-//    margin-bottom: 10px;
+
+.sidebar-nav__item {
+  padding: 10px 0;
+  font-weight: 500;
+
+  + .sidebar-nav__item {
+    border-top: 1px solid #eaeaea;
+  }
+}
+
+//.iconAdd {
+//  position: relative;
+//  color: red;
+//  border-top: 1px solid #2a3a57;
+//  border-bottom: 1px solid #2a3a57;
+//  padding: 6px 0;
+//  margin-bottom: 10px;
 //}
 //.iconAdd::before{
 //    content: '+';
@@ -427,7 +411,7 @@
 //    width: 20px;
 //    height: 20px;
 //    font-size: 20px;
-//    color: white;
+//    color: red;
 //    display: flex;
 //    align-items: center;
 //    justify-content: center;
@@ -458,5 +442,5 @@
 //    border-right: 1px solid #2a3a57;
 //    border-left: 1px solid #2a3a57;
 //}
-//
-//
+
+

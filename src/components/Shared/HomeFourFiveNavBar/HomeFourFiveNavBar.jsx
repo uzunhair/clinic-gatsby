@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import {
@@ -11,8 +11,7 @@ import {
   UilPhoneVolume,
   UilBars,
 } from '@iconscout/react-unicons';
-import { StaticImage } from 'gatsby-plugin-image';
-// import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sidebar/Sidebar';
 
 import logoImg from '../../../images/logo/logo.svg';
 
@@ -31,8 +30,9 @@ const Logo = styled(Link)`
 
 const HomeFourFiveNavBar = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = useCallback(() => setShow(false), []);
+  const handleShow = useCallback(() => setShow(true), []);
+
   const [stickyMenu, setStickyMenu] = useState(false);
   useEffect(() => {
     const stickyMenuBar = () => {
@@ -110,7 +110,6 @@ const HomeFourFiveNavBar = () => {
             </div>
           </div>
         </div>
-        {/* <!-- menu-area --> */}
         <div
           className={
             stickyMenu
@@ -186,7 +185,7 @@ const HomeFourFiveNavBar = () => {
         </div>
       </header>
 
-      {/* <Sidebar show={show} handleClose={handleClose} /> */}
+      <Sidebar show={show} handleClose={handleClose} />
     </>
   );
 };
