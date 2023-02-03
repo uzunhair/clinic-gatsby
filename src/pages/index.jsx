@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import HomeFourNavBar from '../components/Shared/HomeFourFiveNavBar/HomeFourFiveNavBar';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const IndexPage = () => {
   return (
     <>
-      <HomeFourNavBar />
+      <NavBar />
       <StaticImage src="../images/img.png" alt="A dinosaur" />
+      <Footer />
     </>
   );
 };

@@ -11,9 +11,9 @@ import {
   UilPhoneVolume,
   UilBars,
 } from '@iconscout/react-unicons';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../Sidebar';
 
-import logoImg from '../../../images/logo/logo.svg';
+import logoImg from '../../images/logo/logo.svg';
 
 const NavBtn = styled.button`
   background-color: transparent;
@@ -28,7 +28,7 @@ const Logo = styled(Link)`
   }
 `;
 
-const HomeFourFiveNavBar = () => {
+const NavBar = () => {
   const [show, setShow] = useState(false);
   const handleClose = useCallback(() => setShow(false), []);
   const handleShow = useCallback(() => setShow(true), []);
@@ -190,4 +190,4 @@ const HomeFourFiveNavBar = () => {
   );
 };
 
-export default HomeFourFiveNavBar;
+export default NavBar;

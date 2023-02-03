@@ -77,6 +77,7 @@ $utilities: map-get-multiple(
       //"padding-bottom",
       //"padding-start",
       "border-width",
+      "text-align",
     )
 );
 @import "bootstrap/utilities/api";
@@ -119,5 +120,5 @@ $utilities: map-get-multiple(
 //@import 'medidove/home_five';
 //@import 'medidove/routing';
 //@import 'medidove/tab';
-//@import 'medidove/footer';
+@import 'medidove/footer';
 @import 'medidove/responsive';
