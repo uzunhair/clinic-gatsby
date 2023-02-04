@@ -122,3 +122,6 @@ $utilities: map-get-multiple(
 //@import 'medidove/tab';
 @import 'medidove/footer';
 @import 'medidove/responsive';
+
+@import "node_modules/slick-carousel/slick/slick";
+@import "slick-theme";
