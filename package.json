@@ -27,14 +27,15 @@
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-plugin-styled-components": "^6.0.0",
     "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-source-wordpress": "^7.5.0",
     "gatsby-transformer-remark": "^6.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
     "react-dom": "^18.2.0",
+    "react-slick": "^0.29.0",
     "sass": "^1.56.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
