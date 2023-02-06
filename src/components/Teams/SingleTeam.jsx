@@ -2,11 +2,16 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const SingleTeam = ({ name, title, number, arr }) => {
+const SingleTeam = ({ number, data }) => {
+  const { title, memberDesignation } = data;
   const featuredImage = {
-    image: arr.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
-    alt: arr.featuredImage?.node?.altText || ``,
+    image: data.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
+    alt: data.featuredImage?.node?.altText || ``,
   };
+
+  const titleArray = title.split(' ');
+  titleArray.pop();
+  const bio = titleArray.join(' ');
 
   return (
     <div className="col-xl-3 col-lg-4 col-md-6">
@@ -21,33 +26,33 @@ const SingleTeam = ({ name, title, number, arr }) => {
           </div>
         </div>
         <div className="team-content h4team-content mb-15">
-          <h3>{name}</h3>
-          <h6>{title}</h6>
+          <h3>{bio}</h3>
+          <h6>{memberDesignation}</h6>
         </div>
         <div className="h4team-social">
           <ul className="list-inline">
             <li>
-              <a href="#">
+              <a href="#1">
                 <i className="fab fa-facebook-f" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#1">
                 <i className="fab fa-twitter" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#1">
                 <i className="fab fa-behance" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#1">
                 <i className="fab fa-linkedin" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#1">
                 <i className="fab fa-youtube" />
               </a>
             </li>
