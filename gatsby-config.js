@@ -65,6 +65,14 @@ module.exports = {
         path: './src/content/doctors-jsx',
       },
     },
+    {
+      resolve: 'gatsby-alias-imports',
+      options: {
+        aliases: {
+          components: 'src/components',
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-transformer-remark`,
     //   options: {
