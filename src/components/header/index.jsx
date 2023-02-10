@@ -28,7 +28,7 @@ const Logo = styled(Link)`
   }
 `;
 
-const NavBar = () => {
+const Header = () => {
   const [show, setShow] = useState(false);
   const handleClose = useCallback(() => setShow(false), []);
   const handleShow = useCallback(() => setShow(true), []);
@@ -190,4 +190,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;

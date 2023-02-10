@@ -18,10 +18,33 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
-    //'gatsby-plugin-mdx',
-    //'gatsby-transformer-remark',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 90,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/content/data/`,
+      },
+    },
+    'gatsby-transformer-csv',
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

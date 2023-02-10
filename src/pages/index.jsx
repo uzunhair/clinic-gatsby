@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import NavBar from '../components/NavBar';
+import Header from 'components/header';
 import RegulatoryAuthorities from '../components/RegulatoryAuthorities';
 import Teams from '../components/Teams';
 import Footer from '../components/Footer';
@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const IndexPage = () => {
   return (
     <>
-      <NavBar />
+      <Header />
       <StaticImage src="../images/img.png" alt="A dinosaur" />
       <Teams />
       <RegulatoryAuthorities />

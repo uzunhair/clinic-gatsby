@@ -1,13 +1,34 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import doctorIcon from '../../images/section-back-icon.svg';
+
+const Container = styled.div`
+  position: relative;
+  margin-bottom: 30px;
+  ${props =>
+    props.alignCenter &&
+    css`
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 75px;
+      @media (min-width: 992px) {
+        width: 80%;
+      }
+      @media (min-width: 1200px) {
+        width: 50%;
+      }
+    `}
+  ~ .section-title {
+    margin-top: 40px;
+  }
+`;
 
 const Title = styled.h3`
   margin-bottom: 18px;
   line-height: 1.2;
   letter-spacing: -0.3px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #223645;
   font-weight: 600;
   font-size: calc(1.375rem + 1.5vw);
@@ -20,13 +41,28 @@ const Title = styled.h3`
   }
 `;
 
+const SubTitle = styled.div`
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #647589;
+  margin-bottom: 28px;
+`;
+
+const Icon = styled.img`
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: -50px;
+  ${props => (props.alignCenter ? 'right: 0' : '')};
+`;
+
 const SectionLine = styled.div`
   position: relative;
   height: 3px;
   width: 80px;
   background-color: #e12454;
-  margin-left: auto;
-  margin-right: auto;
+  ${props => (props.alignCenter ? 'margin: 0 auto' : 'margin-left: 30px')};
 
   &:after,
   &:before {
@@ -43,18 +79,16 @@ const SectionLine = styled.div`
   }
 `;
 
-const SectionHeader = ({ title, subtitle }) => {
+const SectionHeader = ({ title, subtitle, icon, alignCenter, test }) => {
+  console.log('rest', test);
+
   return (
-    <div className="row justify-content-center">
-      <div className="col-xl-6 col-lg-10">
-        <div className="section-title text-center pos-rel mb-75">
-          <img className="section-back-icon" src={doctorIcon} alt="" />
-          <h5 className="pos-rel">{subtitle}</h5>
-          <Title>{title}</Title>
-          <SectionLine />
-        </div>
-      </div>
-    </div>
+    <Container className="section-title" alignCenter={alignCenter}>
+      {icon && <Icon src={doctorIcon} alignCenter={alignCenter} alt="" />}
+      {subtitle && <SubTitle>{subtitle}</SubTitle>}
+      <Title>{title}</Title>
+      <SectionLine alignCenter={alignCenter} />
+    </Container>
   );
 };
 
