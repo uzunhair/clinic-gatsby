@@ -3,7 +3,9 @@ import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 const SingleTeam = ({ number, data }) => {
-  const { title, memberDesignation } = data;
+  const {
+    frontmatter: { title, profession },
+  } = data;
   const featuredImage = {
     image: data.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
     alt: data.featuredImage?.node?.altText || ``,
@@ -27,7 +29,7 @@ const SingleTeam = ({ number, data }) => {
         </div>
         <div className="team-content h4team-content mb-15">
           <h3>{bio}</h3>
-          <h6>{memberDesignation}</h6>
+          <h6>{profession}</h6>
         </div>
         <div className="h4team-social">
           <ul className="list-inline">
