@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { mediaBreakpointUpMd, mediaBreakpointUpXl } from 'components/styled';
 import doctorIcon from '../../images/section-back-icon.svg';
 
 const Container = styled.div`
@@ -33,12 +34,13 @@ const Title = styled.h3`
   font-weight: 600;
   font-size: calc(1.375rem + 1.5vw);
   position: relative;
-  @media (min-width: 768px) {
+
+  ${mediaBreakpointUpMd`
     font-size: 40px;
-  }
-  @media (min-width: 992px) {
+  `}
+  ${mediaBreakpointUpXl`
     font-size: 60px;
-  }
+  `}
 `;
 
 const SubTitle = styled.div`

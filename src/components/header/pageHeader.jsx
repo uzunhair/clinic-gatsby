@@ -1,29 +1,42 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { mediaBreakpointUpMd } from 'components/styled';
+import { mediaBreakpointUpMd, mediaBreakpointUpLg } from 'components/styled';
 
 const Section = styled.section`
   background-color: #f4f9fc;
-  padding: 100px 0;
+  padding: 36px 0;
 
-  // @media (min-width: 768px) {
-  //   background-color: blue;
-  // }
-  //
-  // ${mediaBreakpointUpMd`
-  //   background-color: red;
-  // `}
+  ${mediaBreakpointUpMd`
+    padding: 80px 0;
+  `}
+  ${mediaBreakpointUpLg`
+    padding: 100px 0;
+  `}
 `;
 
 const Title = styled.h1`
-  font-size: 44px;
-  margin-bottom: 15px;
+  font-size: 28px;
+  margin: 10px 0;
+
+  ${mediaBreakpointUpMd`
+    font-size: 36px;
+    margin: 15px 0;
+  `}
+  ${mediaBreakpointUpLg`
+    font-size: 44px;
+  `}
 `;
 
 const SubTitle = styled.div`
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 16px;
+
+  ${mediaBreakpointUpMd`
+    font-size: 18px;
+  `}
+  ${mediaBreakpointUpLg`
+    font-size: 20px;
+  `}
 `;
 
 const Breadcrumb = styled.ol`
@@ -31,6 +44,7 @@ const Breadcrumb = styled.ol`
   padding: 0;
   margin: 0;
   display: inline-flex;
+  flex-wrap: wrap;
 `;
 
 const BreadcrumbItem = styled.li`
@@ -65,7 +79,7 @@ const PageHeader = ({ title, subtitle }) => {
   return (
     <Section>
       <div className="container">
-        <SubTitle>Стоматолог</SubTitle>
+        <SubTitle>{subtitle}</SubTitle>
         <Title>{title}</Title>
         <nav aria-label="breadcrumb">
           <Breadcrumb>
@@ -73,7 +87,7 @@ const PageHeader = ({ title, subtitle }) => {
               <Link to="/">Главная</Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <Link to="/">Врачи</Link>
+              <Link to="/doctors">Врачи</Link>
             </BreadcrumbItem>
             <BreadcrumbItem aria-current="page" className="active">
               {subtitle}

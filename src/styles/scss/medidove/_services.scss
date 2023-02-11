@@ -194,6 +194,26 @@
      margin-left: 20px;
      transition: .4s;
 }
+
+.doctor-details-area {
+  padding-top: 44px;
+  padding-bottom: 35px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 115px;
+    padding-bottom: 70px;
+  }
+}
+
+.section-title {
+  img {
+    @include media-breakpoint-down(xl) {
+      width: 140px;
+      bottom: -20px;
+      top: auto;
+    }
+  }
+}
  .doctor-details-title {
      font-size: 24px;
      letter-spacing: 0;

@@ -30,7 +30,7 @@ const CountDefis = styled.span`
   text-align: center;
 `;
 
-export const PriceList = ({ data }) => {
+export const PriceList = ({ data, narcosis }) => {
   return (
     <ul>
       {data.map(({ node }) => (
@@ -47,14 +47,16 @@ export const PriceList = ({ data }) => {
           </Count>
         </Item>
       ))}
-      <Item>
-        <div>Наркоз *оплачивается отдельно</div>
-        <Count>
-          <span>5000 ₽</span>
-          <CountDefis>-</CountDefis>
-          <span>10 000 ₽</span>
-        </Count>
-      </Item>
+      {narcosis && (
+        <Item>
+          <div>Наркоз *оплачивается отдельно</div>
+          <Count>
+            <span>5000 ₽</span>
+            <CountDefis>-</CountDefis>
+            <span>10 000 ₽</span>
+          </Count>
+        </Item>
+      )}
       <Item className="price-list--help">
         Внимание! Цены на сайте могут отличаться от реальных. Точную сумму уточняйте у администратора +7 (8722) 77‒70‒07
       </Item>

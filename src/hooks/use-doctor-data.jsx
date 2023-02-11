@@ -11,6 +11,11 @@ export const useDoctorData = () => {
               title
               slug
               profession
+              photo {
+                childImageSharp {
+                  gatsbyImageData(width: 800)
+                }
+              }
             }
           }
         }
