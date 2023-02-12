@@ -82,7 +82,6 @@ const SectionLine = styled.div`
 `;
 
 const SectionHeader = ({ title, subtitle, icon, alignCenter, test }) => {
-  console.log('rest', test);
 
   return (
     <Container className="section-title" alignCenter={alignCenter}>

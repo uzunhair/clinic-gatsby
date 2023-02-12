@@ -17,6 +17,9 @@ export const useDoctorData = () => {
                 }
               }
             }
+            fields {
+              slug
+            }
           }
         }
       }

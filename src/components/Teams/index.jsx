@@ -6,8 +6,7 @@ import SectionHeader from '../section/sectionHeader';
 
 const Teams = () => {
   const data = useDoctorData();
-  console.log(data);
-
+  
   return (
     <section className="team-area pt-180 pb-65 gray-bg">
       <div className="container">

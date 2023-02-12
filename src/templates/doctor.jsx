@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 
 import Header from 'components/header';
 import PageHeader from 'components/header/pageHeader';
@@ -34,7 +34,11 @@ export default function PageTemplate({ data, children }) {
               <div className="service-widget mb-50">
                 <div className="team-wrapper team-box-2 team-box-3 text-center">
                   <div className="team-thumb">
-                    <GatsbyImage image={featuredImg} alt={title} />
+                    {featuredImg ? (
+                      <GatsbyImage alt={title} image={featuredImg} />
+                    ) : (
+                      <StaticImage src="../images/empty-doctor.svg" alt="Врач" />
+                    )}
                   </div>
                   <div className="team-member-info mt-35">
                     <h3>{title}</h3>
@@ -122,7 +126,7 @@ export const query = graphql`
         desc
         photo {
           childImageSharp {
-            gatsbyImageData(width: 800)
+            gatsbyImageData(width: 600, quality: 100)
           }
         }
       }

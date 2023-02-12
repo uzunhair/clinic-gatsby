@@ -53,7 +53,7 @@ export const PriceList = ({ data, narcosis }) => {
           <Count>
             <span>5000 ₽</span>
             <CountDefis>-</CountDefis>
-            <span>10 000 ₽</span>
+            <span>15 000 ₽</span>
           </Count>
         </Item>
       )}

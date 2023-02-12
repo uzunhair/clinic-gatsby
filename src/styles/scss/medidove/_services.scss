@@ -215,9 +215,13 @@
   }
 }
  .doctor-details-title {
-     font-size: 24px;
+     font-size: 22px;
      letter-spacing: 0;
      text-transform: capitalize;
+
+   @include media-breakpoint-up(md) {
+     font-size: 24px;
+   }
 }
  .more-service-title span {
      display: block;
