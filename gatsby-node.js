@@ -34,7 +34,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // you'll call `createPage` for each result
   posts.forEach(node => {
-    console.log('----', node.frontmatter.slug, node.fields.slug, node.frontmatter.slug || node.fields.slug);
     createPage({
       // As mentioned above you could also query something else like frontmatter.title above and use a helper function
       // like slugify to create a slug
