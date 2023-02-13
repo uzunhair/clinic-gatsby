@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 
+import useServiceData from 'hooks/use-service-data';
 import Header from 'components/header';
 import PageHeader from 'components/header/pageHeader';
 import Footer from 'components/Footer';
@@ -17,6 +18,7 @@ const shortcodes = { Link, SectionHeader, PriceList, TimeLines };
 export default function ServicePageTemplate({ data, children }) {
   const { title, profession, instagram } = data.mdx.frontmatter;
   const featuredImg = getImage(data.mdx.frontmatter.photo?.childImageSharp?.gatsbyImageData);
+  const serviceList = useServiceData();
 
   return (
     <>
@@ -33,58 +35,20 @@ export default function ServicePageTemplate({ data, children }) {
             <div className="col-xl-5 col-lg-4 order-1">
               <div className="service-widget mb-50">
                 <div className="widget-title-box mb-30">
-                  <h3 className="widget-title">More Services</h3>
+                  <h3 className="widget-title">Другие услуги</h3>
                 </div>
                 <div className="more-service-list">
                   <ul>
-                    <li>
-                      <Link to="/services">
-                        <div className="more-service-icon">
-                          <img src="../health.svg" alt="" />
-                        </div>
-                        <div className="more-service-title">Body Surgery</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services">
-                        <div className="more-service-icon">
-                          <img src="../health.svg" alt="" />
-                        </div>
-                        <div className="more-service-title">Dental Care</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services">
-                        <div className="more-service-icon">
-                          <img src="../health.svg" alt="" />
-                        </div>
-                        <div className="more-service-title">Eye Care</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services">
-                        <div className="more-service-icon">
-                          <img src="../health.svg" alt="" />
-                        </div>
-                        <div className="more-service-title">Blood cancer</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services">
-                        <div className="more-service-icon">
-                          <img src="../health.svg" alt="" />
-                        </div>
-                        <div className="more-service-title">Neurology Sargery</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services">
-                        <div className="more-service-icon">
-                          <img src="../health.svg" alt="" />
-                        </div>
-                        <div className="more-service-title">Allergic Issue</div>
-                      </Link>
-                    </li>
+                    {serviceList.map(({ node: { id, frontmatter, fields } }) => (
+                      <li key={id}>
+                        <Link to={frontmatter.slug || fields.slug}>
+                          <div className="more-service-icon">
+                            <img src="../health.svg" alt="" />
+                          </div>
+                          <div className="more-service-title">{frontmatter.title}</div>
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
