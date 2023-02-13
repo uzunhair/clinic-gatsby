@@ -9,6 +9,7 @@ import PageHeader from 'components/header/pageHeader';
 import Footer from 'components/Footer';
 import SectionHeader from 'components/section/sectionHeader';
 import PriceList from 'components/priceList';
+import PriceService from 'components/priceList/price-service';
 import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
@@ -29,6 +30,7 @@ export default function ServicePageTemplate({ data, children }) {
           <div className="row">
             <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
               <article className="doctor-details-box">
+                <PriceService />
                 <MDXProvider components={shortcodes}>{children}</MDXProvider>
               </article>
             </div>
@@ -50,63 +52,6 @@ export default function ServicePageTemplate({ data, children }) {
                       </li>
                     ))}
                   </ul>
-                </div>
-              </div>
-              <div className="service-widget mb-50">
-                <div className="widget-title-box mb-30">
-                  <h3 className="widget-title">Get Some Advice?</h3>
-                </div>
-                <form className="service-contact-form" action="">
-                  <div className="row">
-                    <div className="col-xl-12">
-                      <div className="contact-input contact-icon contact-user mb-20">
-                        <input type="text" placeholder="Enter your name" />
-                      </div>
-                    </div>
-                    <div className="col-xl-12">
-                      <div className="contact-input contact-icon contact-mail mb-20">
-                        <input type="text" placeholder="Enter your email" />
-                      </div>
-                    </div>
-                    <div className="col-xl-12">
-                      <div className="contact-input contact-icon contact-hourglass">
-                        <select className="form-select select_style" aria-label="Default select example">
-                          <option defaultValue="Select type of care">Select type of care</option>
-                          <option defaultValue="1">Select type of care</option>
-                          <option defaultValue="2">Select type of care</option>
-                          <option defaultValue="2">Select type of care</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <div className="ser-form-btn text-center mt-40">
-                  <a href="#" className="primary_btn btn-icon ml-0" style={{ animationDelay: '0.6s' }} tabIndex="0">
-                    <span>+</span>
-                    Request for call
-                  </a>
-                </div>
-              </div>
-              <div className="service-widget mb-50 border-0 p-0">
-                <div className="banner-widget">
-                  <Link to="/contact">
-                    <img src="img/services/services-banner.png" alt="" />
-                  </Link>
-                </div>
-              </div>
-              <div className="service-widget mb-50">
-                <div className="team-wrapper team-box-2 team-box-3 text-center">
-                  <div className="team-thumb">
-                    {featuredImg ? (
-                      <GatsbyImage alt={title} image={featuredImg} />
-                    ) : (
-                      <StaticImage src="../images/empty-doctor.svg" alt="Врач" />
-                    )}
-                  </div>
-                  <div className="team-member-info mt-35">
-                    <h3>{title}</h3>
-                    <div className="f-500 text-up-case letter-spacing pink-color h6">{profession}</div>
-                  </div>
                 </div>
               </div>
               <div className="service-widget mb-50">
