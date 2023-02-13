@@ -9,7 +9,7 @@ import PageHeader from 'components/header/pageHeader';
 import Footer from 'components/Footer';
 import SectionHeader from 'components/section/sectionHeader';
 import PriceList from 'components/priceList';
-import PriceService from 'components/priceList/price-service';
+import PriceInService from 'components/priceList/price-in-service';
 import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
@@ -30,7 +30,7 @@ export default function ServicePageTemplate({ data, children }) {
           <div className="row">
             <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
               <article className="doctor-details-box">
-                <PriceService />
+                <PriceInService />
                 <MDXProvider components={shortcodes}>{children}</MDXProvider>
               </article>
             </div>

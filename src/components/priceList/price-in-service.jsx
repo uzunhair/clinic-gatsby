@@ -7,8 +7,9 @@ const Item = styled.div`
   display: block;
 `;
 
-const PriceService = () => {
+const PriceInService = () => {
   const data = usePriceData();
+
   return (
     <>
       <div>Hello</div>
@@ -19,4 +20,4 @@ const PriceService = () => {
   );
 };
 
-export default PriceService;
+export default PriceInService;
