@@ -84,8 +84,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'doctors-jsx',
-        path: './src/content/doctors-jsx',
+        name: 'service',
+        path: './src/content/services',
       },
     },
     {

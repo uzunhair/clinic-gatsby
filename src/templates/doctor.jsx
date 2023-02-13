@@ -14,7 +14,7 @@ import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
 
 const shortcodes = { Link, SectionHeader, PriceList, TimeLines };
 
-export default function PageTemplate({ data, children }) {
+export default function DoctorPageTemplate({ data, children }) {
   const { title, profession, instagram } = data.mdx.frontmatter;
   const featuredImg = getImage(data.mdx.frontmatter.photo?.childImageSharp?.gatsbyImageData);
 

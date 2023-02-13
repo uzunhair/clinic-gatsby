@@ -9,7 +9,7 @@ const Teams = () => {
   const data = useDoctorData();
 
   return (
-    <section className="team-area pt-180 pb-65 gray-bg">
+    <section className="team-area pt-180 pb-65">
       <div className="container">
         <SectionHeader title="Профессионалы в медицине" subtitle="Наша команда" icon alignCenter />
         <div className="row">

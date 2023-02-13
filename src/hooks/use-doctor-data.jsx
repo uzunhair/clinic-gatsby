@@ -3,7 +3,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 export const useDoctorData = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(sort: { frontmatter: { order: ASC } }, limit: 8) {
+      allMdx(
+        sort: { frontmatter: { order: ASC } }
+        limit: 8
+        filter: { fields: { sourceInstanceName: { eq: "doctors-mdx" } } }
+      ) {
         edges {
           node {
             id

@@ -52,10 +52,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === 'Mdx') {
     const fileNode = getNode(node.parent);
+    // создаем поле, содержащее название папки
     createNodeField({
       node,
       name: 'slug',
       value: `/${fileNode.relativeDirectory}`,
+    });
+
+    // создаем поле, содержащее имя источника
+    createNodeField({
+      node,
+      name: 'sourceInstanceName',
+      value: fileNode.sourceInstanceName,
     });
   }
 };
