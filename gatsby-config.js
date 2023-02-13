@@ -69,6 +69,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'templates',
+        path: './src/templates/',
+      },
+      __key: 'templates',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'pages',
         path: './src/pages/',
       },

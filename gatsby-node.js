@@ -1,9 +1,9 @@
 const path = require('path');
 
-const doctorTemplate = path.resolve(`./src/templates/doctor.jsx`);
-
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
+  const doctorTemplate = path.resolve(`./src/templates/doctor.jsx`);
+  const serviceTemplate = path.resolve(`./src/templates/service.jsx`);
 
   const result = await graphql(`
     query {
@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
           fields {
             slug
+            sourceInstanceName
           }
           internal {
             contentFilePath
@@ -39,7 +40,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // like slugify to create a slug
       path: node.frontmatter.slug || node.fields.slug,
       // Provide the path to the MDX content file so webpack can pick it up and transform it into JSX
-      component: `${doctorTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
+      component: `${
+        node.fields.sourceInstanceName === `service` ? serviceTemplate : doctorTemplate
+      }?__contentFilePath=${node.internal.contentFilePath}`,
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id, category: node.frontmatter.category },
