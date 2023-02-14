@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           frontmatter {
             slug
-            category
+            categoryArray
           }
           fields {
             slug
@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }?__contentFilePath=${node.internal.contentFilePath}`,
       // You can use the values in this context in
       // our page layout component
-      context: { id: node.id, category: node.frontmatter.category },
+      context: { id: node.id, category: node.frontmatter.category, categoryArrayNode: node.frontmatter.categoryArray },
     });
   });
 };

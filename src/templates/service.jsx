@@ -125,7 +125,7 @@ export const Head = ({ data }) => {
 };
 
 export const query = graphql`
-  query ($id: String!, $category: String!) {
+  query ($id: String!, $categoryArrayNode: String) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
@@ -139,7 +139,7 @@ export const query = graphql`
         }
       }
     }
-    allPrice20Csv(filter: { Category: { eq: $category } }, sort: { Name: ASC }) {
+    allPrice20Csv(filter: { Category: { eq: $categoryArrayNode } }, sort: { Name: ASC }) {
       edges {
         node {
           id
