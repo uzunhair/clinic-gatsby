@@ -34,7 +34,7 @@ export const PriceList = ({ data, narcosis }) => {
   return (
     <ul>
       {data.map(({ node }) => (
-        <Item key={node.Name}>
+        <Item key={node.id}>
           <div>{node.Name}</div>
           <Count>
             <span>{`${node.Price_Min}  ₽`}</span>

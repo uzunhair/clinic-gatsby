@@ -14,9 +14,10 @@ import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
 
-const shortcodes = { Link, SectionHeader, PriceList, TimeLines };
+const shortcodes = { Link, SectionHeader, PriceList, PriceInService, TimeLines };
 
-export default function ServicePageTemplate({ data, children }) {
+export default function ServicePageTemplate({ data, children, ...tttt }) {
+  console.log('---', data, tttt);
   const { title, profession, instagram } = data.mdx.frontmatter;
   const featuredImg = getImage(data.mdx.frontmatter.photo?.childImageSharp?.gatsbyImageData);
   const serviceList = useServiceData();
@@ -30,7 +31,6 @@ export default function ServicePageTemplate({ data, children }) {
           <div className="row">
             <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
               <article className="doctor-details-box">
-                <PriceInService />
                 <MDXProvider components={shortcodes}>{children}</MDXProvider>
               </article>
             </div>
@@ -125,7 +125,7 @@ export const Head = ({ data }) => {
 };
 
 export const query = graphql`
-  query ($id: String!, $categoryArrayNode: String) {
+  query ($id: String!, $categoryArrayNode: [String]) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
@@ -139,7 +139,7 @@ export const query = graphql`
         }
       }
     }
-    allPrice20Csv(filter: { Category: { eq: $categoryArrayNode } }, sort: { Name: ASC }) {
+    allPrice20Csv(filter: { Category: { in: $categoryArrayNode } }, sort: [{ Category: ASC }, { Name: ASC }]) {
       edges {
         node {
           id
