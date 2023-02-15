@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 
 import useServiceData from 'hooks/use-service-data';
 import Header from 'components/header';
@@ -13,13 +12,12 @@ import PriceInService from 'components/priceList/price-in-service';
 import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
+import moreServiceIcon from '../../static/health.svg';
 
 const shortcodes = { Link, SectionHeader, PriceList, PriceInService, TimeLines };
 
-export default function ServicePageTemplate({ data, children, ...tttt }) {
-  console.log('---', data, tttt);
+export default function ServicePageTemplate({ data, children }) {
   const { title, profession, instagram } = data.mdx.frontmatter;
-  const featuredImg = getImage(data.mdx.frontmatter.photo?.childImageSharp?.gatsbyImageData);
   const serviceList = useServiceData();
 
   return (
@@ -45,7 +43,7 @@ export default function ServicePageTemplate({ data, children, ...tttt }) {
                       <li key={id}>
                         <Link to={frontmatter.slug || fields.slug}>
                           <div className="more-service-icon">
-                            <img src="../health.svg" alt="" />
+                            <img src={moreServiceIcon} alt="" />
                           </div>
                           <div className="more-service-title">{frontmatter.title}</div>
                         </Link>
