@@ -56,7 +56,7 @@ const RegulatoryAuthorities = () => {
       <div className="container">
         <div className="about-title text-center mb-70 position-relative">
           <div className="green-color h5">Для пациентов</div>
-          <h3 className="white-color h1">Контролирующие органы</h3>
+          <h3 className="h1">Контролирующие органы</h3>
         </div>
         <div className="row">
           <Slider className="brand-active" {...settings}>

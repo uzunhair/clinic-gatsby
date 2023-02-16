@@ -2,9 +2,9 @@
 //
 /* Normal desktop :1200px. */
  @media (min-width: 1200px) and (max-width: 1500px) {
-//     .slider-height {
-//         min-height: 700px;
-//    }
+     .slider-height {
+         min-height: 700px;
+    }
 //     .btn.btn-icon.btn-icon-white {
 //         display: none;
 //    }
@@ -57,9 +57,9 @@
 }
 /* Normal desktop :992px. */
  @media (min-width: 992px) and (max-width: 1200px) {
-//     .slider-height {
-//         min-height: 700px;
-//    }
+     .slider-height {
+         min-height: 700px;
+    }
 //     .header-padding {
 //         padding: 0 0;
 //    }
@@ -418,10 +418,10 @@
 //     .header-info span {
 //         margin-right: 30px;
 //    }
-//     .slider-height {
-//         min-height: 620px;
-//         background-position: center;
-//    }
+     .slider-height {
+         min-height: 620px;
+         background-position: center;
+    }
 //     .main-menu ul li:last-child {
 //         margin-right: 0;
 //    }
@@ -436,9 +436,9 @@
 //         display: inline-block;
 //         margin-bottom: 30px;
 //    }
-//     .hero-slider-caption h1 {
-//         font-size: 52px;
-//    }
+     .hero-slider-caption h1 {
+         font-size: 52px;
+    }
 //     .service-box-3 .service-thumb img {
 //         width: 100%;
 //    }
@@ -713,13 +713,12 @@
 //     .medical-icon-brand-2 {
 //         display: none;
 //    }
-//     .hero-slider-caption h1 {
-//         font-size: 40px;
-//    }
-//     .play-btn.popup-video {
-//         margin-left: 0;
-//         margin-top: 30px;
-//    }
+     .hero-slider-caption h1 {
+         font-size: 40px;
+    }
+     .play-btn.popup-video {
+         margin-top: 30px;
+    }
 //     .hero-text {
 //         text-align: center;
 //    }
@@ -769,10 +768,10 @@
 //    .header-menu-area.header-padding {
 //         padding: 25px 0 25px;
 //    }
-//     .slider-height {
-//         min-height: 590px;
-//         background-position: center;
-//    }
+     .slider-height {
+         min-height: 460px;
+         background-position: center;
+    }
 //     .hero-slider-caption {
 //         margin-bottom: 30px;
 //    }
