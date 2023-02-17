@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 // import { UilPlay } from '@iconscout/react-unicons';
 
-
 const MainSliderItem = ({ bgClassName }) => {
   return (
     <div className={`single-slider slider-height d-flex align-items-center slider_bg_${bgClassName}`}>
@@ -14,7 +13,8 @@ const MainSliderItem = ({ bgClassName }) => {
                 <div className="white-color">Мы заботимся о Вашем здоровье</div>
                 <div className="white-color h1">Лучшие врачи и современное оборудование.</div>
                 <p className="white-color">
-                  С первых дней работы Клиники Амирханова наша команда сосредоточена на создании высококачественного обслуживания
+                  С первых дней работы Клиники Амирханова наша команда сосредоточена на создании высококачественного
+                  обслуживания
                 </p>
               </div>
               <div className="hero-slider-btn">

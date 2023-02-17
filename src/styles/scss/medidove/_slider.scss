@@ -39,8 +39,11 @@
   border-radius: 6px;
   padding: 12px 24px;
   background-color: #8fb569;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 
+  @media (min-width: 768px) {
+    margin-right: 1.5rem;
+  }
 }
 
 .hero-slider-top {
@@ -48,8 +51,10 @@
 }
 
 .hero-slider-discont {
-  font-size: 22px;
-
+  font-size: 20px;
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
   span {
     position: relative;
     color: #f0f0f0;
@@ -149,7 +154,7 @@
     z-index: 2;
     height: 50px;
     width: 50px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -157,11 +162,11 @@
     background: #fff;
     //line-height: 80px;
     transition: .3s;
-
     @media (min-width: 768px) {
       height: 80px;
       width: 80px;
       left: 90px;
+      display: flex;
     }
 
     &:after {
@@ -273,9 +278,10 @@
 }
 
 .swiper-slide-active {
-  .hero-slider-caption h5,
-  .hero-slider-caption h1,
+  .hero-slider-caption .h5,
+  .hero-slider-caption .h1,
   .hero-slider-caption p,
+  .hero-slider-top,
   .hero-slider-btn,
   .h4-span {
     animation-name: fadeInUp2;
@@ -283,7 +289,8 @@
   }
 }
 
-.swiper-slide-active .hero-slider-caption h5 {
+.swiper-slide-active .hero-slider-top,
+.swiper-slide-active .hero-slider-caption .h5 {
   animation-delay: 0.3s;
   animation-duration: 0.3s;
 }
