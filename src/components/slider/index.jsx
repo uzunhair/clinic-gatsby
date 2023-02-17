@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 // eslint-disable-next-line import/no-unresolved
 import 'swiper/css/navigation';
-import MainSliderItem1 from './main-slider-item-1';
+import MainSliderItemDent from './main-slider-item-dent';
 import MainSliderItem from './main-slider-item';
 
 const MainSilder = () => {
@@ -22,7 +22,7 @@ const MainSilder = () => {
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}>
           <SwiperSlide>
-            <MainSliderItem1 bgClassName="1" />
+            <MainSliderItemDent bgClassName="1" />
           </SwiperSlide>
           <SwiperSlide>
             <MainSliderItem bgClassName="2" />
