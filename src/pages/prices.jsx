@@ -7,7 +7,7 @@ import useSiteMetadata from 'hooks/use-site-metadata';
 import Header from 'components/header';
 import PageHeader from 'components/header/pageHeader';
 import Footer from 'components/Footer';
-import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
+import { UilInstagramAlt, UilPhone, UilSearch } from '@iconscout/react-unicons';
 
 const Category = styled.div`
   margin-bottom: 2.5rem;
@@ -34,7 +34,7 @@ const Body = styled.div`
   align-items: center;
   padding: 8px 0;
   + div {
-    border-top: 1px solid rgb(200 183 255 / 20%);
+    border-top: 1px solid #eaeaea;
   }
 `;
 
@@ -66,6 +66,12 @@ const PricesPage = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
+              <div className="search-form mb-40">
+                <input type="text" value="" name="price-filter" placeholder="Поиск" />
+                <button type="submit">
+                  <UilSearch />
+                </button>
+              </div>
               <article className="doctor-details-box">
                 {list.map(({ fieldValue, edges }) => {
                   return (
