@@ -75,22 +75,24 @@ const BreadcrumbItem = styled.li`
   }
 `;
 
-const PageHeader = ({ title, subtitle }) => {
+const PageHeader = ({ title, breadcrumbActive, showSubtitle, breadcrumb }) => {
   return (
     <Section>
       <div className="container">
-        <SubTitle>{subtitle}</SubTitle>
+        {showSubtitle && <SubTitle>{breadcrumbActive}</SubTitle>}
         <Title>{title}</Title>
         <nav aria-label="breadcrumb">
           <Breadcrumb>
             <BreadcrumbItem>
               <Link to="/">Главная</Link>
             </BreadcrumbItem>
-            <BreadcrumbItem>
-              <Link to="/doctors">Врачи</Link>
-            </BreadcrumbItem>
+            {breadcrumb && (
+              <BreadcrumbItem>
+                <Link to={breadcrumb.path}>{breadcrumb.name}</Link>
+              </BreadcrumbItem>
+            )}
             <BreadcrumbItem aria-current="page" className="active">
-              {subtitle}
+              {breadcrumbActive}
             </BreadcrumbItem>
           </Breadcrumb>
         </nav>

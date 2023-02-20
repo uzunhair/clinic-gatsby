@@ -21,7 +21,12 @@ export default function DoctorPageTemplate({ data, children }) {
   return (
     <>
       <Header />
-      <PageHeader title={title} subtitle={profession} />
+      <PageHeader
+        title={title}
+        breadcrumbActive={profession}
+        showSubtitle
+        breadcrumb={{ path: '/doctors', name: 'Врачи' }}
+      />
       <div className="doctor-details-area">
         <div className="container">
           <div className="row">

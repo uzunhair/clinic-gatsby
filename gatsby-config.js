@@ -8,8 +8,9 @@ module.exports = {
     description:
       '«Клиника Амирханова» — это многопрофильное медицинское учреждение, которое объединило в себе клинику в новом просторном здании с широким спектром лечения различных болезней',
     contact: {
-      email: 'amirkhanov.clinique@gmail.com',
       phone: '+7‒965‒488‒77‒00',
+      instagram: 'amirkhanov_clinic',
+      email: 'amirkhanov.clinique@gmail.com',
       adress: 'г. Махачкала, ул. Циолковского 12в',
     },
     menuMain: [
