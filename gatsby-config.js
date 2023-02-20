@@ -7,6 +7,29 @@ module.exports = {
     siteUrl: `https://amirkhanov-clinic.ru/`,
     description:
       '«Клиника Амирханова» — это многопрофильное медицинское учреждение, которое объединило в себе клинику в новом просторном здании с широким спектром лечения различных болезней',
+    contact: {
+      email: 'amirkhanov.clinique@gmail.com',
+      phone: '+7‒965‒488‒77‒00',
+      adress: 'г. Махачкала, ул. Циолковского 12в',
+    },
+    menuMain: [
+      {
+        title: 'Главная',
+        link: '/',
+      },
+      {
+        title: 'Врачи',
+        link: '/doctors',
+      },
+      {
+        title: 'Услуги',
+        link: '/services',
+      },
+      {
+        title: 'Контакты',
+        link: '/contact',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -104,53 +127,6 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     gfm: true,
-    //     footnotes: true,
-    //     // blocks: ["h2"], Blocks option value can be provided here as an array.
-    //     excerpt_separator: `<!-- end -->`,
-    //     plugins: [
-    //       {
-    //         resolve: `gatsby-remark-images`,
-    //         options: {
-    //           maxWidth: 740,
-    //         },
-    //       },
-    //       {
-    //         resolve: `gatsby-remark-responsive-iframe`,
-    //         options: {
-    //           wrapperStyle: `margin-bottom: 1.0725rem`,
-    //         },
-    //       },
-    //       `gatsby-remark-copy-linked-files`,
-    //       {
-    //         resolve: `gatsby-remark-smartypants`,
-    //         options: {
-    //           dashes: `oldschool`,
-    //         },
-    //       },
-    //       {
-    //         resolve: `gatsby-remark-embed-snippet`,
-    //         options: {
-    //           // Example code links are relative to this dir.
-    //           directory: `${__dirname}/src/code-examples/`,
-    //         },
-    //       },
-    //       `gatsby-remark-autolink-headers`,
-    //       `gatsby-remark-graphviz`, // graphviz before prismjs
-    //       `gatsby-remark-prismjs`,
-    //       `gatsby-remark-katex`,
-    //     ],
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-page-creator`,
-    //   options: {
-    //     path: './src/content/doctors/',
-    //   },
-    // },
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
