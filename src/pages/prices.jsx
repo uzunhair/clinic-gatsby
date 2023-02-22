@@ -41,10 +41,15 @@ const Body = styled.div`
 const Count = styled.div`
   white-space: nowrap;
   display: flex;
-  min-width: 150px;
+  margin-left: 1rem;
   justify-content: flex-end;
   text-align: right;
   font-size: 14px;
+
+  @media (min-width: 768px) {
+    min-width: 150px;
+    right: 0;
+  }
 `;
 
 const CountDefis = styled.span`
@@ -67,7 +72,10 @@ const PricesPage = ({ data }) => {
   const [price, setPrice] = useState(list);
   const onChange = useCallback(({ target }) => setValue(target.value), []);
   const filterPrice = price.map(element => {
-    return { ...element, edges: element.edges.filter(edges => edges.node.Name.toLowerCase().indexOf(value) !== -1) };
+    return {
+      ...element,
+      edges: element.edges.filter(edges => edges.node.Name.toLowerCase().indexOf(value.toLowerCase()) !== -1),
+    };
   });
 
   return (
@@ -77,7 +85,7 @@ const PricesPage = ({ data }) => {
       <div className="doctor-details-area">
         <div className="container">
           <div className="row">
-            <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
+            <div className="col-xl-7 col-lg-8">
               <div className="search-form mb-40">
                 <Input onChange={onChange} />
                 <button type="submit">
@@ -112,7 +120,7 @@ const PricesPage = ({ data }) => {
                 })}
               </article>
             </div>
-            <div className="col-xl-5 col-lg-4 order-1">
+            <div className="col-xl-5 col-lg-4">
               <div className="service-widget mb-50">
                 <div className="widget-title-box mb-30">
                   <h3 className="widget-title">Контакты</h3>
