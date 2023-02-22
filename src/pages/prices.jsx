@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useState, useCallback } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -52,11 +52,23 @@ const CountDefis = styled.span`
   text-align: center;
 `;
 
+const Input = memo(
+  ({ onChange }) =>
+    console.log('render button') || <input type="text" name="price-filter" onChange={onChange} placeholder="Поиск" />,
+);
+
 const PricesPage = ({ data }) => {
   const list = data.allPrice20Csv.group;
   const {
     contact: { phone, instagram },
   } = useSiteMetadata();
+
+  const [value, setValue] = useState('');
+  const [price, setPrice] = useState(list);
+  const onChange = useCallback(({ target }) => setValue(target.value), []);
+  const filterPrice = price.map(element => {
+    return { ...element, edges: element.edges.filter(edges => edges.node.Name.toLowerCase().indexOf(value) !== -1) };
+  });
 
   return (
     <>
@@ -67,29 +79,31 @@ const PricesPage = ({ data }) => {
           <div className="row">
             <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
               <div className="search-form mb-40">
-                <input type="text" value="" name="price-filter" placeholder="Поиск" />
+                <Input onChange={onChange} />
                 <button type="submit">
                   <UilSearch />
                 </button>
               </div>
               <article className="doctor-details-box">
-                {list.map(({ fieldValue, edges }) => {
+                {filterPrice.map(({ fieldValue, edges }) => {
                   return (
-                    <Category key={fieldValue}>
+                    <Category key={fieldValue} className={edges.length ? '' : 'd-none'}>
                       <CategoryTitle className="h3">{fieldValue}</CategoryTitle>
-                      {edges.map(({ node }) => {
+                      {edges.map(({ node: { id, Name: name, Price_Min: priceMin, Price_Max: priceMax } }) => {
                         return (
-                          <Body key={node.id}>
-                            <div>{node.Name}</div>
-                            <Count>
-                              <span>{`${node.Price_Min}  ₽`}</span>
-                              {node.Price_Max && (
-                                <>
-                                  <CountDefis>-</CountDefis>
-                                  <span>{`${node.Price_Max}  ₽`}</span>
-                                </>
-                              )}
-                            </Count>
+                          <Body key={id}>
+                            <div>{name}</div>
+                            {priceMin > 1 && (
+                              <Count>
+                                <span>{`${priceMin}  ₽`}</span>
+                                {priceMax && (
+                                  <>
+                                    <CountDefis>-</CountDefis>
+                                    <span>{`${priceMax}  ₽`}</span>
+                                  </>
+                                )}
+                              </Count>
+                            )}
                           </Body>
                         );
                       })}

@@ -79,7 +79,7 @@ const Header = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="#1">Прайс лист</a>
+                        <Link to="/prices">Прайс лист</Link>
                       </li>
                       <li>
                         <a href="#1">Медиа</a>
