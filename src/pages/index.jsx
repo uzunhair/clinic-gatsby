@@ -1,4 +1,5 @@
 import * as React from 'react';
+import SEO from '../components/seo';
 import Header from 'components/header';
 import Services from 'components/Services';
 import MainSilder from 'components/slider';
@@ -21,4 +22,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <SEO />;
