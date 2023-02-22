@@ -11,6 +11,11 @@ const useSiteMetadata = () => {
             phone
             instagram
           }
+          menu {
+            key
+            title
+            path
+          }
         }
       }
     }

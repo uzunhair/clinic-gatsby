@@ -11,7 +11,10 @@ import {
   UilPhoneVolume,
   UilBars,
 } from '@iconscout/react-unicons';
+
+import useSiteMetadata from 'hooks/use-site-metadata';
 import Sidebar from '../Sidebar';
+import Nav from './nav';
 
 import logoImg from '../../images/logo/logo.svg';
 
@@ -29,6 +32,7 @@ const Logo = styled(Link)`
 `;
 
 const Header = () => {
+  const { menu } = useSiteMetadata();
   const [show, setShow] = useState(false);
   const handleClose = useCallback(() => setShow(false), []);
   const handleShow = useCallback(() => setShow(true), []);
@@ -123,22 +127,7 @@ const Header = () => {
                   <img src={logoImg} alt="Клиника Амирханова" />
                 </Logo>
                 <div className="header__menu header__menu4 pl-60">
-                  <nav id="mobile-menu">
-                    <ul>
-                      <li>
-                        <Link to="/">Главная +</Link>
-                      </li>
-                      <li>
-                        <Link to="/services">Врачи +</Link>
-                      </li>
-                      <li>
-                        <Link to="/doctors">Услуги +</Link>
-                      </li>
-                      <li>
-                        <Link to="/doctors">Контакты +</Link>
-                      </li>
-                    </ul>
-                  </nav>
+                  <Nav items={menu} />
                 </div>
 
                 <NavBtn className="side-toggle d-lg-none" onClick={handleShow}>

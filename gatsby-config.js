@@ -13,22 +13,26 @@ module.exports = {
       email: 'amirkhanov.clinique@gmail.com',
       adress: 'г. Махачкала, ул. Циолковского 12в',
     },
-    menuMain: [
+    menu: [
       {
+        key: 'home',
         title: 'Главная',
-        link: '/',
+        path: '/',
       },
       {
+        key: 'doctors',
         title: 'Врачи',
-        link: '/doctors',
+        path: '/doctors',
       },
       {
+        key: 'services',
         title: 'Услуги',
-        link: '/services',
+        path: '/services',
       },
       {
+        key: 'contact',
         title: 'Контакты',
-        link: '/contact',
+        path: '/contact',
       },
     ],
   },
