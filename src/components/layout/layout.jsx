@@ -3,11 +3,11 @@ import Header from 'components/header';
 import Footer from 'components/Footer';
 import PageHeader from 'components/header/pageHeader';
 
-export const Layout = ({ children }) => {
+export const Layout = ({ title, breadcrumbActive, children }) => {
   return (
     <>
       <Header />
-      <PageHeader title="Прайс лист" breadcrumbActive="Прайс лист" />
+      <PageHeader title={title} breadcrumbActive={breadcrumbActive} />
       {children}
       <Footer />
     </>
