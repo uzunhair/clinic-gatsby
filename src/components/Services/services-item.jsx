@@ -20,10 +20,15 @@ const Image = styled(Link)`
   }
 `;
 
-const ServicesItem = ({ data: { fields: { slug }, frontmatter: { title, desc } }}) => {
+const ServicesItem = ({
+  data: {
+    fields: { slug },
+    frontmatter: { title, desc },
+  },
+}) => {
   return (
     <div className="col-xl-4 col-lg-6 col-md-6">
-      <div className="service-box text-center mb-30">
+      <div className="service-box text-center mb-30 service-box-border">
         <Image className="service-thumb" to={slug}>
           <StaticImage src="../../images/services/health.svg" alt="" />
         </Image>
