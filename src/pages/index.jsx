@@ -1,8 +1,8 @@
 import * as React from 'react';
-import SEO from '../components/seo';
 import Header from 'components/header';
 import Services from 'components/Services';
 import MainSilder from 'components/slider';
+import SEO from 'components/seo';
 import RegulatoryAuthorities from '../components/RegulatoryAuthorities';
 import Teams from '../components/Teams';
 import Footer from '../components/Footer';

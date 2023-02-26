@@ -9,6 +9,8 @@ const useSiteMetadata = () => {
           description
           contact {
             phone
+            email
+            address
             instagram
           }
           menu {

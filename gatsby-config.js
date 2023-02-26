@@ -11,7 +11,7 @@ module.exports = {
       phone: '+7‒965‒488‒77‒00',
       instagram: 'amirkhanov_clinic',
       email: 'amirkhanov.clinique@gmail.com',
-      adress: 'г. Махачкала, ул. Циолковского 12в',
+      address: 'г. Махачкала, ул. Циолковского 12в',
     },
     menu: [
       {
