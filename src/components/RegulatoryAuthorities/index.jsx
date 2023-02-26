@@ -61,19 +61,19 @@ const RegulatoryAuthorities = () => {
         <div className="row">
           <Slider className="brand-active" {...settings}>
             <Item>
-              <StaticImage src="../../images/banner-1.jpg" alt="A dinosaur" />
+              <StaticImage src="../../images/banner-1.jpg" alt="" />
             </Item>
             <Item>
-              <StaticImage src="../../images/banner-5.jpg" alt="A dinosaur" />
+              <StaticImage src="../../images/banner-5.jpg" alt="" />
             </Item>
             <Item>
-              <StaticImage src="../../images/banner-6.jpg" alt="A dinosaur" />
+              <StaticImage src="../../images/banner-6.jpg" alt="" />
             </Item>
             <Item>
-              <StaticImage src="../../images/banner-7.jpg" alt="A dinosaur" />
+              <StaticImage src="../../images/banner-7.jpg" alt="" />
             </Item>
             <Item>
-              <StaticImage src="../../images/banner-8.jpg" alt="A dinosaur" />
+              <StaticImage src="../../images/banner-8.jpg" alt="" />
             </Item>
           </Slider>
         </div>
