@@ -34,6 +34,11 @@ module.exports = {
         title: 'Контакты',
         path: '/contact',
       },
+      {
+        key: 'patients',
+        title: 'Пациентам',
+        path: '/patients',
+      },
     ],
   },
   plugins: [
