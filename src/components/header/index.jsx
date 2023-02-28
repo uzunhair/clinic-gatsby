@@ -13,7 +13,7 @@ import {
 } from '@iconscout/react-unicons';
 
 import useSiteMetadata from 'hooks/use-site-metadata';
-import Sidebar from '../Sidebar';
+import Sidebar from 'components/Sidebar';
 import Nav from './nav';
 
 import logoImg from '../../images/logo/logo.svg';
@@ -32,7 +32,7 @@ const Logo = styled(Link)`
 `;
 
 const Header = () => {
-  const { menu } = useSiteMetadata();
+  const { menu, contact } = useSiteMetadata();
   const [show, setShow] = useState(false);
   const handleClose = useCallback(() => setShow(false), []);
   const handleShow = useCallback(() => setShow(true), []);
@@ -54,21 +54,21 @@ const Header = () => {
               <div className="col-lg">
                 <div className="header-info header-info4 p-0">
                   <span>
-                    <a href="mailto:amirkhanov.clinique@gmail.com">
+                    <a href={`mailto:${contact.email}`}>
                       <UilEnvelope size={18} color="#e12454" style={{ marginRight: 8 }} />
-                      amirkhanov.clinique@gmail.com
+                      {contact.email}
                     </a>
                   </span>
                   <span>
-                    <a href="tel:+79654887700">
+                    <a href={`tel:${contact.phone}`}>
                       <UilPhone size={18} color="#e12454" style={{ marginRight: 8 }} />
-                      +7‒965‒488‒77‒00
+                      {contact.phone}
                     </a>
                   </span>
                   <span>
                     <a href="https://yandex.ru/maps/?from=api-maps&ll=47.516468%2C42.984490&mode=routes&origin=jsapi21&rtext=~42.972454%2C47.490812&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgozNjk1MjAyNzI0EnLQoNC%2B0YHRgdC40Y8sINCg0LXRgdC%2F0YPQsdC70LjQutCwINCU0LDQs9C10YHRgtCw0L0sINCc0LDRhdCw0YfQutCw0LvQsCwg0YPQu9C40YbQsCDQptC40L7Qu9C60L7QstGB0LrQvtCz0L4sIDEy0JIiCg2X9j1CFczjK0I%3D&z=13.16">
                       <UilClock size={18} color="#e12454" style={{ marginRight: 8 }} />
-                      г. Махачкала, ул. Циолковского 12в
+                      {contact.address}
                     </a>
                   </span>
                 </div>
@@ -78,9 +78,9 @@ const Header = () => {
                   <div className="top4-menu">
                     <ul className="list-inline">
                       <li>
-                        <a className="need-help" href="#1">
+                        <Link className="need-help" to="/help">
                           Нужна помощь?
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <Link to="/prices">Прайс лист</Link>
@@ -93,17 +93,17 @@ const Header = () => {
                   <div className="header-social-icons top4-social d-none d-xl-block">
                     <ul>
                       <li>
-                        <a href="#1">
+                        <a href={contact.telegram}>
                           <UilTelegram size={24} color="#b2bfcf" />
                         </a>
                       </li>
                       <li>
-                        <a href="#1">
+                        <a href={contact.whatsapp}>
                           <UilWhatsappAlt size={24} color="#b2bfcf" />
                         </a>
                       </li>
                       <li>
-                        <a href="#1">
+                        <a href={contact.instagram}>
                           <UilInstagramAlt size={24} color="#b2bfcf" />
                         </a>
                       </li>
@@ -126,7 +126,7 @@ const Header = () => {
                 <Logo to="/">
                   <img src={logoImg} alt="Клиника Амирханова" />
                 </Logo>
-                <div className="header__menu header__menu4 pl-60">
+                <div className="header__menu header__menu4">
                   <Nav items={menu} />
                 </div>
 
@@ -134,9 +134,9 @@ const Header = () => {
                   <UilBars size={28} color="#10111e" />
                 </NavBtn>
               </div>
-              <div className="col-xl-auto col-lg-9 col-md-9 d-none d-xl-flex d-flex align-items-center justify-content-end">
+              <div className="col-xl-auto col-lg-9 col-md-9 d-none d-xl-flex align-items-center justify-content-end">
                 <div className="d-flex align-items-center justify-content-end">
-                  <div className="header-lang pos-rel d-none d-xxl-block">
+                  <div className="header-lang pos-rel d-none">
                     <div className="lang-icon">
                       <UilPhoneVolume />
                       <span>Администраторы</span>
@@ -144,15 +144,6 @@ const Header = () => {
                     <ul className="header-lang-list">
                       <li>
                         <a href="#1">USA</a>
-                      </li>
-                      <li>
-                        <a href="#1">UK</a>
-                      </li>
-                      <li>
-                        <a href="#1">CA</a>
-                      </li>
-                      <li>
-                        <a href="#1">AU</a>
                       </li>
                     </ul>
                   </div>
@@ -164,7 +155,7 @@ const Header = () => {
                       tabIndex="0">
                       <span>+</span>
                       <div>Позвонить</div>
-                      <div className="d-none d-xl-block pl-5"> в клинику</div>
+                      <div className="d-none d-xxl-block pl-5"> в клинику</div>
                     </Link>
                   </div>
                 </div>

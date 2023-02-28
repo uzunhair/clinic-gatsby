@@ -211,15 +211,24 @@
     box-shadow: 0 6px 12px 0 rgba(254, 69, 54, 0.4);
   }
 }
+.single-slider {
+  .gatsby-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
 
 .slider_bg_1 {
-  background: url("/slider/img.png");
+  background: url("/image/slider/img.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider_bg_2 {
-  background: url("/slider/img_1.png");
+  background: url("/image/slider/img_1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

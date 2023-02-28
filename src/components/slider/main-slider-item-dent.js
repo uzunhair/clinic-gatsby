@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-// import { UilPlay } from '@iconscout/react-unicons';
 
-const MainSliderItemDent = ({ bgClassName }) => {
+const MainSliderItemDent = ({ bgClassName, image }) => {
   return (
     <div className={`single-slider slider-height d-flex align-items-center slider_bg_${bgClassName}`}>
+      {image}
       <div className="container">
         <div className="row">
           <div className="col-xl-6 col-lg-8 col-md-10">

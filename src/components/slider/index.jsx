@@ -1,4 +1,5 @@
 import React from 'react';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Navigation } from 'swiper';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -22,10 +23,10 @@ const MainSilder = () => {
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}>
           <SwiperSlide>
-            <MainSliderItemDent bgClassName="1" />
+            <MainSliderItemDent image={<StaticImage src="../../images/img.png" alt="" loading="eager" />} />
           </SwiperSlide>
           <SwiperSlide>
-            <MainSliderItem bgClassName="2" />
+            <MainSliderItem image={<StaticImage src="../../images/img_1.png" alt="" />} />
           </SwiperSlide>
         </Swiper>
       </div>

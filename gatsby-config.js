@@ -5,11 +5,12 @@ module.exports = {
   siteMetadata: {
     title: `Клиника Амирханова`,
     siteUrl: `https://amirkhanov-clinic.ru/`,
-    description:
-      '«Клиника Амирханова» — это многопрофильное медицинское учреждение, которое объединило в себе клинику в новом просторном здании с широким спектром лечения различных болезней',
+    description: `"Клиника Амирханова" — это многопрофильное медицинское учреждение, которое объединило в себе клинику в новом просторном здании с широким спектром лечения различных болезней`,
     contact: {
       phone: '+7‒965‒488‒77‒00',
+      whatsapp: 'https://wa.me/79640007474',
       instagram: 'amirkhanov_clinic',
+      telegram: 'https://t.me/amirkhanovclinic',
       email: 'amirkhanov.clinique@gmail.com',
       address: 'г. Махачкала, ул. Циолковского 12в',
     },

@@ -12,7 +12,7 @@ import PriceInService from 'components/priceList/price-in-service';
 import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
-import moreServiceIcon from '../../static/health.svg';
+import moreServiceIcon from '../../static/image/health.svg';
 
 const shortcodes = { Link, SectionHeader, PriceList, PriceInService, TimeLines };
 

@@ -14,12 +14,6 @@ const Services = () => {
           {data.map(({ node }) => (
             <ServicesItem key={node.id} data={node} />
           ))}
-          {/*<ServicesItem title="Хирургия" />*/}
-          {/*<ServicesItem title="Стоматология" />*/}
-          {/*<ServicesItem title="ЛОР" />*/}
-          {/*<ServicesItem title="Гинекология" />*/}
-          {/*<ServicesItem title="Косметология" />*/}
-          {/*<ServicesItem title="Урология" />*/}
         </div>
       </div>
     </section>
