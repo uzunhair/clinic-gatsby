@@ -148,15 +148,15 @@ const Header = () => {
                     </ul>
                   </div>
                   <div className="header-button pl-50">
-                    <Link
-                      to="/contact"
+                    <a
+                      href={`tel:${contact.phone}`}
                       className="primary_btn btn-icon ml-0 d-flex"
                       style={{ animationDelay: '0.6s' }}
                       tabIndex="0">
                       <span>+</span>
                       <div>Позвонить</div>
                       <div className="d-none d-xxl-block pl-5"> в клинику</div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 const MainSliderItemDent = ({ bgClassName, image }) => {
   return (
@@ -16,17 +15,17 @@ const MainSliderItemDent = ({ bgClassName, image }) => {
                     3000 ₽ вместо <span>4500 ₽</span>
                   </div>
                 </div>
-                <div className="white-color h1">При лечении кариеса Ультразвуковая чистка бесплатно.</div>
+                <div className="white-color h1">При лечении кариеса Профессиональная чистка зубов бесплатно.</div>
                 <p className="white-color">
                   Удаление зубного камня ультразвуком, обучение правильного ухода за ротовой полостью, шлифовка и
                   полировка зубов
                 </p>
               </div>
               <div className="hero-slider-btn">
-                <Link to="/contact" className="primary_btn btn-icon ml-0 mr-20">
+                <a href="https://wa.me/79200000000" className="primary_btn btn-icon ml-0 mr-20">
                   <span>+</span>
                   Связяться с врачом
-                </Link>
+                </a>
               </div>
             </div>
           </div>
