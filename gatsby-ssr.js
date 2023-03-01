@@ -3,7 +3,7 @@ const React = require('react');
 exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents, setPostBodyComponents }) => {
   setHtmlAttributes({ lang: 'ru' });
 
-  setHeadComponents([<meta name="yandex-verification" key="y-verification" content="e838571ad4c9f49c" />]);
+  setHeadComponents([<meta name="yandex-verification" key="y-verification" content="4790b7e4d15459f8" />]);
 
   setPostBodyComponents([
     <script
