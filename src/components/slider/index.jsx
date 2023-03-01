@@ -16,12 +16,7 @@ const MainSilder = () => {
   return (
     <section className="hero-area">
       <div className="hero-slider">
-        <Swiper
-          modules={[Navigation]}
-          navigation
-          loop
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={swiper => console.log(swiper)}>
+        <Swiper modules={[Navigation]} navigation loop>
           <SwiperSlide>
             <MainSliderItemDent image={<StaticImage src="../../images/img.png" alt="" loading="eager" />} />
           </SwiperSlide>

@@ -13,6 +13,8 @@ const useSiteMetadata = () => {
             email
             address
             instagram
+            whatsapp
+            telegram
           }
           menu {
             key

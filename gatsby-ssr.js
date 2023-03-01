@@ -3,11 +3,11 @@ const React = require('react');
 exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents, setPostBodyComponents }) => {
   setHtmlAttributes({ lang: 'ru' });
 
-  setHeadComponents([<meta name="yandex-verification" key="y-verification" content="4790b7e4d15459f8" />]);
+  setHeadComponents([<meta name="yandex-meta" key="y-verification" content="4790b7e4d15459f8" />]);
 
   setPostBodyComponents([
     <script
-      key="gatsby-plugin-yandex-metrika"
+      key="yandex-metrika"
       dangerouslySetInnerHTML={{
         __html: `
           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -24,7 +24,7 @@ exports.onRenderBody = ({ setHtmlAttributes, setHeadComponents, setPostBodyCompo
         });`,
       }}
     />,
-    <noscript>
+    <noscript key="yandex-noscript">
       <div>
         <img src="https://mc.yandex.ru/watch/66513775" style={{ position: 'absolute', left: '-9999px' }} alt="" />
       </div>
