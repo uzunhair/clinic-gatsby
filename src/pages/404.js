@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
+
+import useSiteMetadata from 'hooks/use-site-metadata';
 
 const pageStyles = {
   color: '#232129',
@@ -23,12 +26,23 @@ const codeStyles = {
   borderRadius: 4,
 };
 
+const Menu = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 1rem;
+  }
+`;
+
 const NotFoundPage = () => {
+  const { menu } = useSiteMetadata();
+
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        Извините 😔, данной страницы не существует либо она перенесена.
         <br />
         {process.env.NODE_ENV === 'development' ? (
           <>
@@ -39,7 +53,16 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Menu>
+          {menu.map(({ key, title, path }) => (
+            <li key={key}>
+              <Link to={path}>
+                {title}
+                {'+'}
+              </Link>
+            </li>
+          ))}
+        </Menu>
       </p>
     </main>
   );
