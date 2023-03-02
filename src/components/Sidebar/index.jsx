@@ -2,7 +2,17 @@ import React from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { UilMapMarker, UilEnvelope, UilPhone, UilClockEight } from '@iconscout/react-unicons';
+import {
+  UilMapMarker,
+  UilEnvelope,
+  UilPhone,
+  UilClockEight,
+  UilTelegram,
+  UilWhatsappAlt,
+  UilInstagramAlt,
+} from '@iconscout/react-unicons';
+
+import useSiteMetadata from 'hooks/use-site-metadata';
 
 const ContactItem = styled.div`
   border-top: 1px solid #eaeaea;
@@ -10,6 +20,8 @@ const ContactItem = styled.div`
 `;
 
 const Sidebar = ({ show, handleClose }) => {
+  const { menu, contact } = useSiteMetadata();
+
   return (
     <Offcanvas show={show} onHide={handleClose} placement="end" className="side__bar">
       <Offcanvas.Header closeButton>
@@ -18,17 +30,21 @@ const Sidebar = ({ show, handleClose }) => {
       <Offcanvas.Body>
         <nav>
           <ul className="sidebar-nav">
+            {menu.map(({ key, title, path }) => (
+              <li className="sidebar-nav__item" key={key}>
+                <Link to={path}>
+                  {title}
+                  {'+'}
+                </Link>
+              </li>
+            ))}
             <li className="sidebar-nav__item">
-              <Link to="/">Главная +</Link>
+              <Link className="need-help" to="/help">
+                Вопрос ответ+
+              </Link>
             </li>
             <li className="sidebar-nav__item">
-              <Link to="/services">Врачи +</Link>
-            </li>
-            <li className="sidebar-nav__item">
-              <Link to="/doctors">Услуги +</Link>
-            </li>
-            <li className="sidebar-nav__item">
-              <Link to="/doctors">Контакты +</Link>
+              <Link to="/prices">Прайс лист+</Link>
             </li>
           </ul>
         </nav>
@@ -53,6 +69,21 @@ const Sidebar = ({ show, handleClose }) => {
         <ContactItem>
           <UilClockEight size={18} color="#e12454" style={{ marginRight: 8 }} />
           Понедельник-Суббота 9:00-18:00
+        </ContactItem>
+        <ContactItem>
+          <a href={contact.telegram}>
+            <UilTelegram size={18} color="#e12454" style={{ marginRight: 8 }} /> Telegram
+          </a>
+        </ContactItem>
+        <ContactItem>
+          <a href={contact.whatsapp}>
+            <UilWhatsappAlt size={18} color="#e12454" style={{ marginRight: 8 }} /> Whatsapp
+          </a>
+        </ContactItem>
+        <ContactItem>
+          <a href={contact.instagram}>
+            <UilInstagramAlt size={18} color="#e12454" style={{ marginRight: 8 }} /> Instagram
+          </a>
         </ContactItem>
       </Offcanvas.Body>
     </Offcanvas>
