@@ -17,11 +17,11 @@ const Section = styled.section`
 
 const Title = styled.h1`
   font-size: 28px;
-  margin: 10px 0;
+  margin-top: 0;
 
   ${mediaBreakpointUpMd`
     font-size: 36px;
-    margin: 15px 0;
+    margin-bottom: 15px;
   `}
   ${mediaBreakpointUpLg`
     font-size: 44px;
@@ -30,6 +30,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.div`
   font-size: 16px;
+  margin-bottom: 10px;
 
   ${mediaBreakpointUpMd`
     font-size: 18px;
