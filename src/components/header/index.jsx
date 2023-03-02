@@ -136,14 +136,13 @@ const Header = () => {
               </div>
               <div className="col-xl-auto col-lg-9 col-md-9 d-none d-xl-flex align-items-center justify-content-end">
                 <div className="d-flex align-items-center justify-content-end">
-                  <div className="header-lang pos-rel d-none">
+                  <div className="header-lang pos-rel">
                     <div className="lang-icon">
-                      <UilPhoneVolume />
-                      <span>Администраторы</span>
+                      <span>RU</span>
                     </div>
                     <ul className="header-lang-list">
                       <li>
-                        <a href="#1">USA</a>
+                        <a href="https://amirkhanov-clinic.com/">EN</a>
                       </li>
                     </ul>
                   </div>
