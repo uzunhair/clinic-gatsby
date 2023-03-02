@@ -27,12 +27,12 @@ export default function ServicePageTemplate({ data, children }) {
       <div className="doctor-details-area">
         <div className="container">
           <div className="row">
-            <div className="col-xl-7 col-lg-8 order-2 order-lg-0">
+            <div className="col-xl-7 col-lg-8 mb-15">
               <article className="doctor-details-box">
                 <MDXProvider components={shortcodes}>{children}</MDXProvider>
               </article>
             </div>
-            <div className="col-xl-5 col-lg-4 order-1">
+            <div className="col-xl-5 col-lg-4">
               <div className="service-widget mb-50">
                 <div className="widget-title-box mb-30">
                   <h3 className="widget-title">Другие услуги</h3>
