@@ -22,7 +22,7 @@ const MainSliderItemDent = ({ bgClassName, image }) => {
                 </p>
               </div>
               <div className="hero-slider-btn">
-                <a href="https://wa.me/79200000000" className="primary_btn btn-icon ml-0 mr-20">
+                <a href="https://wa.me/79382010902" className="primary_btn btn-icon ml-0 mr-20">
                   <span>+</span>
                   Связяться с врачом
                 </a>
