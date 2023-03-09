@@ -13,9 +13,8 @@ import {
 
 import useSiteMetadata from 'hooks/use-site-metadata';
 import Sidebar from 'components/Sidebar';
+import LogoIcon from 'components/icon/logo';
 import Nav from './nav';
-
-import logoImg from '../../images/logo/logo.svg';
 
 const NavBtn = styled.button`
   background-color: transparent;
@@ -123,7 +122,7 @@ const Header = () => {
             <div className="row">
               <div className="col-xl col-lg-12 col-md-12 d-flex align-items-center navbar__wrapper">
                 <Logo to="/">
-                  <img src={logoImg} alt="Клиника Амирханова" />
+                  <LogoIcon />
                 </Logo>
                 <div className="header__menu header__menu4">
                   <Nav items={menu} />
