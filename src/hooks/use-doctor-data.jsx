@@ -15,6 +15,7 @@ export const useDoctorData = () => {
               title
               slug
               profession
+              instagram
               photo {
                 childImageSharp {
                   gatsbyImageData(width: 800)

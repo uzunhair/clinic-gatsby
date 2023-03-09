@@ -39,6 +39,7 @@ export const query = graphql`
             title
             slug
             profession
+            instagram
             photo {
               childImageSharp {
                 gatsbyImageData(width: 800)

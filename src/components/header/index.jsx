@@ -8,7 +8,6 @@ import {
   UilEnvelope,
   UilPhone,
   UilClock,
-  UilPhoneVolume,
   UilBars,
 } from '@iconscout/react-unicons';
 
@@ -86,7 +85,7 @@ const Header = () => {
                         <Link to="/prices">Прайс лист</Link>
                       </li>
                       <li>
-                        <a href="#1">Медиа</a>
+                        <a href="https://www.youtube.com/@amirkhanov_clinic">Медиа</a>
                       </li>
                     </ul>
                   </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { UilInstagramAlt } from '@iconscout/react-unicons';
 
 const SingleTeam = ({ number, data }) => {
   const {
-    frontmatter: { title, profession },
+    frontmatter: { title, profession, instagram },
   } = data;
   const featuredImage = getImage(data.frontmatter.photo?.childImageSharp?.gatsbyImageData);
   const slug = data.frontmatter.slug || data.fields.slug;
@@ -31,35 +32,12 @@ const SingleTeam = ({ number, data }) => {
             {titleNew}
           </Link>
           <div className="h6 team-content__subtitle">{profession}</div>
-        </div>
-        <div className="h4team-social">
-          <ul className="list-inline">
-            <li>
-              <a href="#1">
-                <i className="fab fa-facebook-f" />
-              </a>
-            </li>
-            <li>
-              <a href="#1">
-                <i className="fab fa-twitter" />
-              </a>
-            </li>
-            <li>
-              <a href="#1">
-                <i className="fab fa-behance" />
-              </a>
-            </li>
-            <li>
-              <a href="#1">
-                <i className="fab fa-linkedin" />
-              </a>
-            </li>
-            <li>
-              <a href="#1">
-                <i className="fab fa-youtube" />
-              </a>
-            </li>
-          </ul>
+          {instagram && (
+            <a href={instagram} title="Instagram Врача" className="d-inline-flex align-items-center">
+              <UilInstagramAlt size={18} style={{ marginRight: 6 }} color="#e12454" />
+              {instagram}
+            </a>
+          )}
         </div>
       </div>
     </div>
