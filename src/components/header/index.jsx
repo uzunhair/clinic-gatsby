@@ -121,14 +121,13 @@ const Header = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-xl col-lg-12 col-md-12 d-flex align-items-center navbar__wrapper">
-                <Logo to="/">
+                <Logo to="/" aria-label="Главная">
                   <LogoIcon />
                 </Logo>
                 <div className="header__menu header__menu4">
                   <Nav items={menu} />
                 </div>
-
-                <NavBtn className="side-toggle d-lg-none" onClick={handleShow}>
+                <NavBtn className="side-toggle d-lg-none" onClick={handleShow} aria-label="Навигация">
                   <UilBars size={28} color="#10111e" />
                 </NavBtn>
               </div>

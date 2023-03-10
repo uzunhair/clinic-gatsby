@@ -30,7 +30,7 @@ const ServicesItem = ({
     <div className="col-xl-4 col-lg-6 col-md-6">
       <div className="service-box text-center mb-30 service-box-border">
         <Image className="service-thumb" to={slug}>
-          <StaticImage src="../../images/services/health.svg" alt="" />
+          <StaticImage src="../../images/services/health.svg" alt={title} />
         </Image>
         <div className="service-content">
           <h3>
