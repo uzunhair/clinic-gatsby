@@ -49,9 +49,9 @@ const Sidebar = ({ show, handleClose }) => {
           </ul>
         </nav>
         <ContactItem>
-          <a href="tel:+79654887700">
+          <a href="tel:+79302140001">
             <UilPhone size={18} color="#e12454" style={{ marginRight: 8 }} />
-            +7‒965‒488‒77‒00
+            +7 (930) 214-00-01
           </a>
         </ContactItem>
         <ContactItem>

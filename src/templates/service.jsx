@@ -59,13 +59,13 @@ export default function ServicePageTemplate({ data, children }) {
                 <div className="more-service-list">
                   <ul>
                     <li>
-                      <a href="tel:+79654887700">
+                      <a href="tel:+79302140001">
                         <div className="more-service-icon">
                           <UilPhone size={40} color="#e12454" />
                         </div>
                         <div className="more-service-title doctor-details-title">
                           <span>Телефон</span>
-                          +7‒965‒488‒77‒00
+                          +7 (930) 214-00-01
                         </div>
                       </a>
                     </li>

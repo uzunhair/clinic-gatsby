@@ -17,7 +17,7 @@ const MainSliderItem = ({ bgClassName, image }) => {
                 </p>
               </div>
               <div className="hero-slider-btn">
-                <a href="tel:+7‒965‒488‒77‒00" className="primary_btn btn-icon ml-0 mr-20">
+                <a href="tel:+7 (930) 214-00-01" className="primary_btn btn-icon ml-0 mr-20">
                   <span>+</span>
                   Записаться
                 </a>

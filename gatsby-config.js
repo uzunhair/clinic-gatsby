@@ -7,8 +7,9 @@ module.exports = {
     siteUrl: `https://amirkhanov-clinic.ru/`,
     description: `"Клиника Амирханова" — это многопрофильное медицинское учреждение, которое объединило в себе клинику в новом просторном здании с широким спектром лечения различных болезней`,
     contact: {
-      phone: '+7‒965‒488‒77‒00',
-      whatsapp: 'https://wa.me/79640007474',
+      // phone: '+7‒965‒488‒77‒00',
+      phone: '+7-930-214-00-01',
+      whatsapp: 'https://wa.me/79654887700',
       instagram: 'amirkhanov_clinic',
       telegram: 'https://t.me/amirkhanovclinic',
       email: 'amirkhanov.clinique@gmail.com',
