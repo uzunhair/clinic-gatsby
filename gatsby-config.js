@@ -9,7 +9,7 @@ module.exports = {
     contact: {
       // phone: '+7‒965‒488‒77‒00',
       phone: '+7-930-214-00-01',
-      whatsapp: 'https://wa.me/79654887700',
+      whatsapp: 'https://wa.me/79302140001',
       instagram: 'amirkhanov_clinic',
       telegram: 'https://t.me/amirkhanovclinic',
       email: 'amirkhanov.clinique@gmail.com',
