@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { UilInstagramAlt } from '@iconscout/react-unicons';
+import useSiteMetadata from 'hooks/use-site-metadata';
 
 const SingleTeam = ({ number, data }) => {
+  const { contact } = useSiteMetadata();
   const {
     frontmatter: { title, profession, instagram },
   } = data;
@@ -32,7 +34,7 @@ const SingleTeam = ({ number, data }) => {
             {titleNew}
           </Link>
           <div className="h6 team-content__subtitle">{profession}</div>
-          {instagram && (
+          {contact.showInstagram && (
             <a href={instagram} title="Instagram Врача" className="d-inline-flex align-items-center">
               <UilInstagramAlt size={18} style={{ marginRight: 6 }} color="#e12454" />
               {instagram}

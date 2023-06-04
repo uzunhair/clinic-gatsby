@@ -100,11 +100,13 @@ const Header = () => {
                           <UilWhatsappAlt size={24} color="#b2bfcf" />
                         </a>
                       </li>
-                      <li>
-                        <a href={contact.instagram}>
-                          <UilInstagramAlt size={24} color="#b2bfcf" />
-                        </a>
-                      </li>
+                      {contact.showInstagram && (
+                        <li>
+                          <a href={contact.instagram}>
+                            <UilInstagramAlt size={24} color="#b2bfcf" />
+                          </a>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 </div>

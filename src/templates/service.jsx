@@ -12,11 +12,13 @@ import PriceInService from 'components/priceList/price-in-service';
 import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
+import useSiteMetadata from 'hooks/use-site-metadata';
 import moreServiceIcon from '../../static/image/health.svg';
 
 const shortcodes = { Link, SectionHeader, PriceList, PriceInService, TimeLines };
 
 export default function ServicePageTemplate({ data, children }) {
+  const { contact } = useSiteMetadata();
   const { title, profession, instagram } = data.mdx.frontmatter;
   const serviceList = useServiceData();
 
@@ -69,7 +71,7 @@ export default function ServicePageTemplate({ data, children }) {
                         </div>
                       </a>
                     </li>
-                    {instagram && (
+                    {contact.showInstagram && instagram && (
                       <li>
                         <a href={`https://instagram.com/${instagram}`}>
                           <div className="more-service-icon">

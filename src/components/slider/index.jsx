@@ -18,10 +18,10 @@ const MainSilder = () => {
       <div className="hero-slider">
         <Swiper modules={[Navigation]} navigation loop>
           <SwiperSlide>
-            <MainSliderItemDent image={<StaticImage src="../../images/img.png" alt="" loading="eager" />} />
+            <MainSliderItem image={<StaticImage src="../../images/img_1.png" alt="" />} />
           </SwiperSlide>
           <SwiperSlide>
-            <MainSliderItem image={<StaticImage src="../../images/img_1.png" alt="" />} />
+            <MainSliderItemDent image={<StaticImage src="../../images/img.png" alt="" loading="eager" />} />
           </SwiperSlide>
         </Swiper>
       </div>

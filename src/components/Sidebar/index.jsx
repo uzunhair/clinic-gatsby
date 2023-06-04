@@ -80,11 +80,13 @@ const Sidebar = ({ show, handleClose }) => {
             <UilWhatsappAlt size={18} color="#e12454" style={{ marginRight: 8 }} /> Whatsapp
           </a>
         </ContactItem>
-        <ContactItem>
-          <a href={contact.instagram}>
-            <UilInstagramAlt size={18} color="#e12454" style={{ marginRight: 8 }} /> Instagram
-          </a>
-        </ContactItem>
+        {contact.showInstagram && (
+          <ContactItem>
+            <a href={contact.instagram}>
+              <UilInstagramAlt size={18} color="#e12454" style={{ marginRight: 8 }} /> Instagram
+            </a>
+          </ContactItem>
+        )}
       </Offcanvas.Body>
     </Offcanvas>
   );

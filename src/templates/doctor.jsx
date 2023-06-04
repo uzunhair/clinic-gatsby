@@ -11,10 +11,12 @@ import PriceList from 'components/priceList';
 import TimeLines from 'components/timelines';
 import SEO from 'components/seo';
 import { UilInstagramAlt, UilPhone } from '@iconscout/react-unicons';
+import useSiteMetadata from 'hooks/use-site-metadata';
 
 const shortcodes = { Link, SectionHeader, PriceList, TimeLines };
 
 export default function DoctorPageTemplate({ data, children }) {
+  const { contact } = useSiteMetadata();
   const { title, profession, instagram } = data.mdx.frontmatter;
   const featuredImg = getImage(data.mdx.frontmatter.photo?.childImageSharp?.gatsbyImageData);
 
@@ -68,7 +70,7 @@ export default function DoctorPageTemplate({ data, children }) {
                         </div>
                       </a>
                     </li>
-                    {instagram && (
+                    {contact.showInstagram && instagram && (
                       <li>
                         <a href={`https://instagram.com/${instagram}`}>
                           <div className="more-service-icon">

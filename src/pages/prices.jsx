@@ -65,7 +65,7 @@ const Input = memo(
 const PricesPage = ({ data }) => {
   const list = data.allPrice20Csv.group;
   const {
-    contact: { phone, instagram },
+    contact: { phone, instagram, showInstagram },
   } = useSiteMetadata();
 
   const [value, setValue] = useState('');
@@ -138,7 +138,7 @@ const PricesPage = ({ data }) => {
                         </div>
                       </a>
                     </li>
-                    {instagram && (
+                    {showInstagram && (
                       <li>
                         <a href={`https://instagram.com/${instagram}`}>
                           <div className="more-service-icon">
