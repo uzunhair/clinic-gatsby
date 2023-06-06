@@ -1,4 +1,5 @@
 import React from 'react';
+import FormAd from 'components/form-ad.jsx';
 
 const MainSliderItem = ({ bgClassName, image }) => {
   return (
@@ -16,13 +17,18 @@ const MainSliderItem = ({ bgClassName, image }) => {
                   обслуживания
                 </p>
               </div>
-              <div className="hero-slider-btn">
+              {bgClassName === 'hide' && (
+                <div className="hero-slider-btn">
                 <a href="tel:+7 (930) 214-00-01" className="primary_btn btn-icon ml-0 mr-20">
                   <span>+</span>
                   Записаться
                 </a>
               </div>
+                )}
             </div>
+          </div>
+          <div className="col-xl-6">
+            <FormAd />
           </div>
         </div>
       </div>
