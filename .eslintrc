@@ -33,19 +33,6 @@
         "prev": "*",
         "next": "return"
       },
-//      {
-//        "blankLine": "always",
-//        "prev": [
-//          "const",
-//          "let",
-//          "var"
-//        ],
-//        "next": [
-//          "const",
-//          "let",
-//          "var"
-//        ]
-//      },
       {
         "blankLine": "always",
         "prev": "directive",
@@ -157,14 +144,6 @@
     "ecmaFeatures": {
       "jsx": true
     }
-  },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  },
-  "globals": {
-    "graphql": false
   }
 }
 
