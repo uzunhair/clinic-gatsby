@@ -1,5 +1,5 @@
 .pagination {
-  // scss-docs-start pagination-css-vars
+  // scss-docs-start pagination-css-vars test
   --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
   --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
   @include rfs($pagination-font-size, --#{$prefix}pagination-font-size);
