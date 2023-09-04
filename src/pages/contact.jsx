@@ -5,6 +5,7 @@ import Layout from 'components/layout/layout';
 import SEO from 'components/seo';
 import useSiteMetadata from 'hooks/use-site-metadata';
 import SectionHeader from 'components/section/sectionHeader';
+import FormAd from 'components/form-ad.jsx';
 
 const ServicesPage = () => {
   const {
@@ -50,6 +51,8 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+
+      <FormAd />  
 
       <section className="contact-form-area gray-bg pt-115 pb-90">
         <div className="container">
